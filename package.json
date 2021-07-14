@@ -1,10 +1,10 @@
 {
-  "name": "hello",
+  "name": "location",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "location",
+  "author": "yuhanna <yuhanna.kapali@kotuko.it>",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
