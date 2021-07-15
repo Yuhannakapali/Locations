@@ -5,14 +5,12 @@ describe('LocationService', () => {
   let service: LocationService;
 
   beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [LocationService],
-    }).compile();
+    service =  new LocationService();
 
-    service = module.get<LocationService>(LocationService);
+    // service = module.get<LocationService>(LocationService);
   });
 
-  it('should be defined', () => {
-    expect(service).toBeDefined();
+  it('should be return locations', () => {
+    expect(service.list()).toMatchObject(['location 1', 'location 2', 'location 3']);
   });
 });
