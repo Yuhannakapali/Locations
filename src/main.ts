@@ -5,7 +5,7 @@ import { ConfigService } from './config/config.service';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  const config = app.get(ConfigService)
+  const config = app.get(ConfigService);
   const viewDir = config.get<string>('template.path');
   const publicDir = config.get<string>('public.path');
 

@@ -7,13 +7,11 @@ export class LocationController {
   constructor(private readonly locationService: LocationService) {}
 
   @Get()
-  @Render("list.hbs")
+  @Render('list.hbs')
   listLocation(): ILocationList {
-    const locations = this.locationService.list()
+    const locations = this.locationService.list();
     return {
-      locations
-    }
-    
+      locations,
+    };
   }
-
 }

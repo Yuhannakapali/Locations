@@ -8,9 +8,8 @@ export class AppService {
   }
 
   listLocation(): ILocationList {
-    
     return {
-      locations: ['location 1', 'location 2', 'location 3']
+      locations: ['location 1', 'location 2', 'location 3'],
     };
   }
 }
