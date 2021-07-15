@@ -7,7 +7,8 @@ export default {
         path : join(__dirname, "..", "views")
     },
     database:{
-        url :"postgres://app:app@localhost/location"
+        url :"postgres://app:app@localhost/location",
+        synchronize: false,
     },
     orm:{
         entities:[`${SOURCE_PATH}/**/*.entity.ts`],
