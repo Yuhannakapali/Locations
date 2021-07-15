@@ -21,4 +21,16 @@ describe('AppController (e2e)', () => {
       .expect(200)
       .expect('Hello World!');
   });
+
+  it('/list (GET)',()=>{
+    return request(app.getHttpServer())
+      .get('/list')
+      .expect(200).then(({text})=>{
+        expect(text).toMatchCompiledHandlebarsTemplate('list.hbs',{
+          locations:['location 1', 'location 2', 'location 3']
+        });
+      });
+      // .expect('Hello World!');
+
+  });
 });
