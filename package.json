@@ -25,6 +25,8 @@
     "@nestjs/core": "^7.6.15",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^7.6.15",
+    "@types/config": "^0.0.39",
+    "config": "^3.3.6",
     "hbs": "^4.1.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
