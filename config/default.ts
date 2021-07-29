@@ -1,19 +1,19 @@
-import { join } from 'path';
+import { resolve } from 'path';
 
-const SOURCE_PATH = join(__dirname, '..', 'src');
+const SOURCE_PATH = resolve(__dirname, '..', 'src');
 
 export default {
-  template: {
-    path: join(__dirname, '..', 'views'),
-  },
   database: {
     url: 'postgres://app:secret@localhost/locations',
-    synchronize: false,
   },
   orm: {
     entities: [`${SOURCE_PATH}/**/*.entity.ts`],
+    synchronize: false,
   },
   public: {
-    path: join(__dirname, '..', 'public'),
+    path: resolve(__dirname, '..', 'public'),
+  },
+  templates: {
+    path: resolve(__dirname, '..', 'views'),
   },
 };

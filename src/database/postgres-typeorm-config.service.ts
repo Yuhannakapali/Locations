@@ -10,7 +10,7 @@ export class PostgresTypeOrmConfigService implements TypeOrmOptionsFactory {
     return {
       type: 'postgres',
       url: this.configService.get<string>('database.url'),
-      entities: [this.configService.get<string>('orm.entities')],
+      entities: this.configService.get<string[]>('orm.entities'),
       synchronize: this.configService.get<boolean>('orm.synchronize'),
     };
   }

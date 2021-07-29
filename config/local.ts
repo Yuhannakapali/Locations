@@ -1,5 +1,5 @@
-export default{
-    orm: {
-        synchronize: true,
-    }
-}
+export default {
+  orm: {
+    synchronize: true,
+  },
+};

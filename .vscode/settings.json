@@ -1,0 +1,18 @@
+{
+    "cSpell.words": [
+        "automapper",
+        "dtos",
+        "typeorm"
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "askForPassword": true,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "connectString": "postgres://app:secret@localhost/locations",
+            "name": "locations"
+        }
+    ]
+}
