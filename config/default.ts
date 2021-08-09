@@ -1,11 +1,11 @@
-import { resolve } from 'path';
+import { resolve } from "path";
 
-const SOURCE_PATH = resolve(__dirname, '..', 'src');
+// const SOURCE_PATH = resolve(__dirname, "..", "src");
 
 export default {
   database: {
-    url: 'postgres://app:secret@arriana-postgresql/locations',
-    host: 'arriana-postgresql',
+    url: "postgres://app:secret@arriana-postgresql/locations",
+    host: "arriana-postgresql",
     port: 5432,
   },
   orm: {
@@ -13,9 +13,9 @@ export default {
     synchronize: false,
   },
   public: {
-    path: resolve(__dirname, '..', 'public'),
+    path: resolve(__dirname, "..", "public"),
   },
   templates: {
-    path: resolve(__dirname, '..', 'views'),
+    path: resolve(__dirname, "..", "views"),
   },
 };
