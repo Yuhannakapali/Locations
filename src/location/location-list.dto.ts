@@ -1,4 +1,4 @@
-import { locationDto } from './location.dto';
+import { locationDto } from "./location.dto";
 
 export interface LocationList {
   locations: locationDto[];

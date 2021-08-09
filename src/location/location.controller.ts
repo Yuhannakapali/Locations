@@ -1,10 +1,11 @@
-import { Controller, Get, Render } from '@nestjs/common';
-import { MappingRegistryService } from 'src/common/mapping-registry.service';
-import { LocationList } from './location-list.dto';
-import { locationDto } from './location.dto';
-import { LocationService } from './location.service';
+import { Controller, Get, Render } from "@nestjs/common";
+import { MappingRegistryService } from "../common/mapping-registry.service";
+// import { LocationList } from "./location-list.dto";
+import { locationDto } from "./location.dto";
+// import { Location } from "./location.entity";
+import { LocationService } from "./location.service";
 
-@Controller('location')
+@Controller("location")
 export class LocationController {
   constructor(
     private readonly locationService: LocationService,
@@ -12,16 +13,22 @@ export class LocationController {
   ) {}
 
   @Get()
-  @Render('list.hbs')
-  public async listLocations(): Promise<LocationList> {
+  @Render("list.hbs")
+  public async listLocations() {
     const locations = await this.locationService.list();
-    const dtos = locations.map((location) =>
+    const dtos = locations.map((location) => {
+      console.log("name", location.name);
+      // locationDto.name
+      console.log(
+        "🚀 ~ file: location.controller.ts ~ line 42 ~ LocationController ~ dtos ~ locationDto.name",
+        locationDto.name,
+      );
       this.mappingRegistryService.map<locationDto>(
-        Location.name,
+        location.name,
         locationDto.name,
         location,
-      ),
-    );
+      );
+    });
 
     return { locations: dtos };
   }

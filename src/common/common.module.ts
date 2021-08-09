@@ -1,5 +1,5 @@
-import { Module } from '@nestjs/common';
-import { MappingRegistryService } from './mapping-registry.service';
+import { Module } from "@nestjs/common";
+import { MappingRegistryService } from "./mapping-registry.service";
 
 @Module({
   providers: [MappingRegistryService],

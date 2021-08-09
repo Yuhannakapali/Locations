@@ -4,10 +4,12 @@ const SOURCE_PATH = resolve(__dirname, '..', 'src');
 
 export default {
   database: {
-    url: 'postgres://app:secret@localhost/locations',
+    url: 'postgres://app:secret@arriana-postgresql/locations',
+    host: 'arriana-postgresql',
+    port: 5432,
   },
   orm: {
-    entities: [`${SOURCE_PATH}/**/*.entity.ts`],
+    entities: [`*/src/**/*.entity{.ts,.js}`],
     synchronize: false,
   },
   public: {

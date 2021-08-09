@@ -1,5 +1,5 @@
-import { Injectable } from '@nestjs/common';
-import { MappingRegistryService } from './mapping-registry.service';
+import { Injectable } from "@nestjs/common";
+import { MappingRegistryService } from "./mapping-registry.service";
 
 @Injectable()
 export abstract class MappingService {

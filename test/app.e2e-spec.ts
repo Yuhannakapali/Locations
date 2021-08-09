@@ -1,9 +1,9 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { INestApplication } from '@nestjs/common';
-import * as request from 'supertest';
-import { AppModule } from './../src/app.module';
+import { Test, TestingModule } from "@nestjs/testing";
+import { INestApplication } from "@nestjs/common";
+import * as request from "supertest";
+import { AppModule } from "./../src/app.module";
 
-describe('AppController (e2e)', () => {
+describe("AppController (e2e)", () => {
   let app: INestApplication;
 
   beforeEach(async () => {
@@ -15,20 +15,20 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it("/ (GET)", () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get("/")
       .expect(200)
-      .expect('Hello World!');
+      .expect("Hello World!");
   });
 
-  it('/list (GET)', () => {
+  it("/list (GET)", () => {
     return request(app.getHttpServer())
-      .get('/list')
+      .get("/list")
       .expect(200)
       .then(({ text }) => {
-        expect(text).toMatchCompiledHandlebarsTemplate('list.hbs', {
-          locations: ['location 1', 'location 2', 'location 3'],
+        expect(text).toMatchCompiledHandlebarsTemplate("list.hbs", {
+          locations: ["location 1", "location 2", "location 3"],
         });
       });
     // .expect('Hello World!');

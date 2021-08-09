@@ -1,8 +1,8 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { Test, TestingModule } from "@nestjs/testing";
+import { AppController } from "./app.controller";
+import { AppService } from "./app.service";
 
-describe('AppController', () => {
+describe("AppController", () => {
   let appController: AppController;
 
   beforeEach(async () => {
@@ -14,17 +14,17 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  describe('root', () => {
+  describe("root", () => {
     it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+      expect(appController.getHello()).toBe("Hello World!");
     });
   });
 
-  describe('root', () => {
-    it('should return "list of location"', () => {
-      expect(appController.getLocation()).toMatchObject({
-        locations: ['location 1', 'location 2', 'location 3'],
-      });
-    });
-  });
+  // describe('root', () => {
+  //   it('should return "list of location"', () => {
+  //     expect(appController.getLocation()).toMatchObject({
+  //       locations: ['location 1', 'location 2', 'location 3'],
+  //     });
+  //   });
+  // });
 });
